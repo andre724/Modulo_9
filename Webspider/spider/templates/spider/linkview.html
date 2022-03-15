@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider - Result</title>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" class="url-form">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        {% for url in Urls %}
+            <ul>
+                <li><a href="">{{url}}</a></li>
+            </ul>
+        {% endfor %}
+    </div>
+    
+</body>
